@@ -1,4 +1,4 @@
-# Calculadora
+# Calculadora básica
 Este proyecto es una calculadora básica hecha con HTML, CSS y JavaScript. La aplicación está diseñada para realizar operaciones matemáticas simples de manera eficiente y fácil de usar.
 
 ### Características
