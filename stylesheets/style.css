@@ -1,0 +1,117 @@
+:root {
+  /* colors */
+  --clr-00: #000000;
+  --clr-1b: #1b1b1b;
+  --clr-20: #202020;
+  --clr-25: #252525;
+  --clr-35: #353535;
+  --clr-66: #666666;
+  --clr-75: #757575;
+  --clr-f1: #f1f2f0;
+  --clr-gl-35: rgba(53, 53, 53, 0.4);
+  --clr-gl-25: rgba(37, 37, 37, 0.4);
+  /* fonts */
+  --monospace: monospace;
+  --roboto: "Roboto", sans-serif;
+  --space-mono: "Space Mono", monospace;
+  --roboto-mono: "Roboto Mono", monospace;
+  /* icons */
+}
+:root .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--clr-1b);
+  display: grid;
+  place-items: center;
+}
+body .calculator {
+  gap: 10px;
+  width: 320px;
+  display: grid;
+  padding: 20px;
+  max-width: 100%;
+  border-radius: 4px;
+  color: var(--clr-f1);
+  background: var(--clr-20);
+  font: 400 16px var(--monospace);
+  border: 1px solid var(--clr-35);
+  box-shadow: 0 0 2px var(--clr-00);
+  grid-template-columns: repeat(4, 1fr);
+}
+body .calculator .screen {
+  padding: 1rem;
+  overflow: hidden;
+  text-align: right;
+  grid-column: 1/5;
+  border-radius: 4px;
+  color: var(--clr-66);
+  background: var(--clr-1b);
+}
+body .calculator .screen:hover {
+  overflow: visible;
+}
+body .calculator .btn {
+  height: 60px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  align-items: center;
+  color: var(--clr-f1);
+  transition: 0.2s ease;
+  justify-content: center;
+  background: transparent;
+  border: 1px dotted var(--clr-35);
+}
+body .calculator .btn:hover {
+  background: var(--clr-25);
+}
+body .calculator .btn:focus-visible {
+  outline: none;
+  border: 1px dotted royalblue;
+  box-shadow: 0 0 1px royalblue;
+}
+body .calculator #cero {
+  grid-column: span 2;
+}
+body .calculator #igual {
+  height: auto;
+  grid-row: span 2;
+}
+
+@media (max-width: 540px) {
+  body .calculator {
+    gap: 0.5rem;
+    width: 240px;
+    padding: 1rem;
+    margin: 40px 20px;
+  }
+  body .calculator .screen {
+    padding: 0.6rem;
+  }
+  body .btn {
+    height: 40px;
+  }
+  body #igual {
+    height: auto;
+  }
+  body::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--clr-gl-25);
+  }
+  body::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: var(--clr-gl-35);
+  }
+}/*# sourceMappingURL=style.css.map */
